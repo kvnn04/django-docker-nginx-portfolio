@@ -1,0 +1,268 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="row align-items-center py-5">
+    <div class="col-md-4 text-center">
+        <img src="{% static 'img/kuma_bienvenida.png' %}" class="img-fluid rounded-circle" alt="Kuma" style="max-height: 250px;">
+    </div>
+    <div class="col-md-8 text-md-start text-center">
+        <h1 class="display-4 fw-bold">Hola, soy Kevin Alexandro Herrera</h1>
+        <p class="lead">Analista de Sistemas y Desarrollador de Software</p>
+        <hr class="w-25 mx-md-0 mx-auto">
+        <p>Diseño y construyo aplicaciones web de alto rendimiento, fusionando lógica de negocio con interfaces modernas. Mi enfoque está en materializar soluciones digitales seguras, desde la arquitectura del servidor hasta la experiencia final del usuario.</p>
+    </div>
+</div>
+
+
+<h2 class="text-center mt-5 pt-5 fw-bold">Zona de Laboratorios</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-2 justify-content-start">
+    <div class="col">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Base de Datos</h3>
+                <p class="card-text">Diseño de esquemas relacionales, optimización de consultas SQL y gestión de integridad de datos.</p>
+                <a href="{% url 'base_de_datos' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Back-End</h3>
+                <p class="card-text">Desarrollo de lógica de servidor robusta, creación de APIs REST y manejo de autenticación segura.</p>
+                <a href="{% url 'backend' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Front-End</h3>
+                <p class="card-text">Interfaces de usuario dinámicas y responsivas enfocadas en la experiencia del usuario.</p>
+                <a href="{% url 'frontend' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Front-End</h3>
+                <p class="card-text">Interfaces de usuario dinámicas y responsivas enfocadas en la experiencia del usuario.</p>
+                <a href="{% url 'frontend' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">DevOps</h3>
+                    <p class="card-text">
+                        Optimización del ciclo de vida de software mediante la automatización, 
+                        gestión de infraestructura en la nube y la integración continua entre desarrollo y operaciones.
+                    </p>
+                <a href="{% url 'lista' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="col">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Redes</h3>
+                <p class="card-text">Configuración de infraestructuras, análisis de protocolos TCP/IP y gestión de tráfico de red.</p>
+                <a href="{% url 'lista' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="col">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Seguridad Informatica</h3>
+                <p class="card-text">Identificación de vulnerabilidades, auditorías de sistemas y protección contra ataques web.</p>
+                <a href="{% url 'lista' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<section class="mt-5">
+    <h2 class="text-center mb-5 fw-bold">Stack Tecnológico</h2>
+
+        <div class="mb-5">
+        <h4 class="text-primary border-bottom pb-2 mb-4">
+            <i class="bi bi-server me-2"></i>Base de datos
+        </h4>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-database display-6 text-dark"></i>
+                    <h6 class="mt-2 fw-bold">SQL Server</h6>
+                    <small class="text-muted d-block">Gestión de datos empresarial con alto enfoque en seguridad e integración con entornos Windows</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-database display-6 text-dark"></i>
+                    <h6 class="mt-2 fw-bold">MySQL</h6>
+                    <small class="text-muted d-block">Sistema de gestión de bases de datos relacionales robusto y escalable para producción</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-database display-6 text-dark"></i>
+                    <h6 class="mt-2 fw-bold">SQLite</h6>
+                    <small class="text-muted d-block">Base de datos ligera y portable, ideal para desarrollo, testing y aplicaciones locales</small>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h4 class="text-info border-bottom pb-2 mb-4">
+            <i class="bi bi-code-square me-2"></i>Desarrollo Backend
+        </h4>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-filetype-py display-6 text-primary"></i>
+                    <h6 class="mt-2 fw-bold">Python / Django</h6>
+                    <small class="text-muted d-block">Framework robusto para aplicaciones de gran escala.</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-filetype-py display-6 text-primary"></i>
+                    <h6 class="mt-2 fw-bold">Python / Fastapi</h6>
+                    <small class="text-muted d-block">APIs de alto rendimiento con validación de datos automática.</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-filetype-py display-6 text-primary"></i>
+                    <h6 class="mt-2 fw-bold">Python / Flask</h6>
+                    <small class="text-muted d-block">Estructuras modulares y minimalistas para servicios web escalables.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h4 class="text-success border-bottom pb-2 mb-4">
+            <i class="bi bi-tools me-2"></i>Frontend
+        </h4>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-bootstrap display-6" style="color: #7952b3;"></i>
+                    <h6 class="mt-2 fw-bold">HTML 5 / CSS 3 / JS</h6>
+                    <small class="text-muted d-block">Estructuración semántica y diseño visual moderno</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-bootstrap display-6" style="color: #7952b3;"></i>
+                    <h6 class="mt-2 fw-bold">Bootstrap 5</h6>
+                    <small class="text-muted d-block">Framework de diseño ágil para la creación de sitios adaptativos</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-5">
+        <h4 class="text-success border-bottom pb-2 mb-4">
+            <i class="bi bi-git me-2"></i>DevTools
+        </h4>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-git display-6 text-warning"></i>
+                    <h6 class="mt-2 fw-bold">Git / GitHub / GitLab</h6>
+                    <small class="text-muted d-block">Control de versiones distribuido para el seguimiento de cambios y gestión de ramas</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h4 class="text-danger border-bottom pb-2 mb-4">
+            <i class="bi bi-terminal-fill me-2"></i>Sistemas y Automatización
+        </h4>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-terminal display-6 text-secondary"></i>
+                    <h6 class="mt-2 fw-bold">Linux / Bash</h6>
+                    <small class="text-muted d-block">Administración de sistemas y automatización de tareas mediante scripting en Bash</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-terminal display-6 text-secondary"></i>
+                    <h6 class="mt-2 fw-bold">Windows / Powershell / CMD</h6>
+                    <small class="text-muted d-block">Automatización de configuraciones y gestión de entornos Windows mediante shell de comandos avanzado</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="mb-5">
+        <h4 class="text-danger border-bottom pb-2 mb-4">
+            <i class="bi bi-shield-lock me-2"></i>Seguridad y Redes
+        </h4>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-terminal display-6 text-secondary"></i>
+                    <h6 class="mt-2 fw-bold">NADA</h6>
+                    <small class="text-muted d-block">NADA</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-terminal display-6 text-secondary"></i>
+                    <h6 class="mt-2 fw-bold">NADA</h6>
+                    <small class="text-muted d-block">NADA</small>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</section>
+
+<section id="sobre-mi" class="py-5">
+    <div class="row align-items-center">
+        <div class="col-md-7">
+            <h2 class="fw-bold mb-4">Sobre mí</h2>
+            <p class="lead text-muted">
+                Soy un apasionado de la tecnología que encontró en el desarrollo de software la herramienta perfecta para materializar ideas. 
+            </p>
+            <p>
+                Mi formación como <strong>Analista de Sistemas</strong> me permite no solo escribir código, sino entender la lógica detrás de cada proceso. Me enfoco en crear soluciones que sean tanto funcionales como seguras, manteniendo siempre la curiosidad por aprender nuevas arquitecturas y metodologías.
+            </p>
+            <p>
+                Cuando no estoy programando, me gusta investigar sobre seguridad informatica y optimización de sistemas, buscando siempre que mis proyectos tengan un rendimiento superior y una estructura impecable.
+            </p>
+        </div>
+
+        <div class="col-md-5">
+            <div class="card border-0 shadow-sm bg-dark text-white p-4">
+                <h4 class="h5 mb-3 text-primary">Información Clave</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> Ubicación: Buenos Aires, Argentina</li>
+                    <li class="mb-2"><i class="bi bi-mortarboard me-2 text-primary"></i> Formación: Analista de Sistemas</li>
+                    <li class="mb-2"><i class="bi bi-translate me-2 text-primary"></i> Idiomas: Español / Inglés (Técnico)</li>
+                    <li class="mb-2"><i class="bi bi-check-circle me-2 text-primary"></i> Disponibilidad: Proyectos Full-time / Freelance</li>
+                </ul>
+                <a href="{% static 'pdf/Kevin_Alexandro_Herrera.pdf' %}" class="btn btn-primary w-100 mt-3" target="_blank">
+                    <i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

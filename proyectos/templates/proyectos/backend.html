@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Mis Proyectos{% endblock %}
+
+{% block content %}
+<div class="py-5">
+    <h2 class="mb-4 text-center">Laboratorio Back-end</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+<div class="col">
+    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <span class="p-2 bg-dark text-white rounded-3 me-2 fw-bold">A</span>
+                <h5 class="card-title text-primary fw-bold mb-0">API KHANTANI - E-commerce Engine</h5>
+            </div>
+            
+            <p class="card-text text-secondary">
+                Backend escalable diseñado para la gestión de indumentaria. Implementé una arquitectura robusta con <strong>FastAPI</strong>, aplicando patrones <strong>SOLID y GRASP</strong> para garantizar un código mantenible y desacoplado.
+            </p>
+            
+            <div class="mb-4">
+                <span class="badge rounded-pill bg-dark">FastAPI</span>
+                <span class="badge rounded-pill bg-primary">MySQL</span>
+                <span class="badge rounded-pill bg-success">JWT Auth</span>
+                <span class="badge rounded-pill bg-info text-dark">SOLID</span>
+                <span class="badge rounded-pill bg-secondary">Python 3.13</span>
+            </div>
+            
+            <ul class="list-unstyled small text-muted mb-0">
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> Control de stock dinámico por variantes</li>
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> Persistencia avanzada con SQLAlchemy</li>
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> Seguridad basada en roles y tokens</li>
+            </ul>
+        </div>
+        
+        <div class="card-footer bg-light border-0 p-4 pt-0 d-flex gap-2">
+            <a href="https://github.com/kvnn04/APIKaminari" target="_blank" class="btn btn-primary btn-sm px-3 rounded-pill">
+                <i class="bi bi-github me-1"></i> Repositorio
+            </a>
+            <a href="https://docs.google.com/document/d/1g31WMuzXVAOoPIyzQsrFJ4_TyTjMczjX3QBy0hOXexs/edit?usp=sharing" target="_blank" class="btn btn-outline-secondary btn-sm px-3 rounded-pill">
+                <i class="bi bi-file-earmark-text me-1"></i> Documentación
+            </a>
+        </div>
+    </div>
+</div>
+        <!-- <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Analizador de Privilegios</h5>
+                    <p class="card-text">Herramienta para automatizar la búsqueda de archivos con permisos de escritura (icacls) en Windows.</p>
+                    <span class="badge bg-secondary">CMD</span>
+                    <span class="badge bg-danger">Seguridad</span>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Portfolio Django</h5>
+                    <p class="card-text">Este mismo sitio web, desarrollado con arquitectura MVT, herencia de plantillas y Bootstrap 5.</p>
+                    <span class="badge bg-secondary">Django</span>
+                    <span class="badge bg-info text-dark">Frontend</span>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Ver detalles</a>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+{% endblock %}

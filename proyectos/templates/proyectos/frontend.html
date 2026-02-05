@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Mis Proyectos{% endblock %}
+
+{% block content %}
+<div class="py-5">
+    <h2 class="mb-4 text-center">Laboratorio Front-end</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="p-2 bg-primary text-white rounded-3 me-2 fw-bold">K</span>
+                        <h5 class="card-title text-primary fw-bold mb-0">KHANTANI - E-commerce UI</h5>
+                    </div>
+                    
+                    <p class="card-text text-secondary">
+                        Plataforma de venta de indumentaria enfocada en <strong>UX/UI</strong>. Desarrollada con <strong>Flask</strong> y <strong>Jinja2</strong>, integra una lógica compleja de <strong>carrito de compras</strong> y <strong>checkout inteligente</strong>. Implementé la pasarela de pagos de <strong>Mercado Pago</strong> y un sistema de persistencia de sesiones para una navegación sin interrupciones.
+                    </p>
+                    
+                    <div class="mb-4">
+                        <span class="badge rounded-pill bg-dark">Flask</span>
+                        <span class="badge rounded-pill bg-primary">Bootstrap 5.3</span>
+                        <span class="badge rounded-pill bg-info text-dark">Mercado Pago API</span>
+                        <span class="badge rounded-pill bg-warning text-dark">UX/UI Design</span>
+                        <span class="badge rounded-pill bg-secondary">Jinja2</span>
+                    </div>
+                    
+                    <ul class="list-unstyled small text-muted mb-0">
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Autenticación con JWT</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Stock dinámico por talle/color</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Logs de errores centralizados</li>
+                    </ul>
+                </div>
+                
+                <div class="card-footer bg-light border-0 p-4 pt-0 d-flex gap-2">
+                    <a href="https://github.com/kvnn04/AppKhantani" target="_blank" class="btn btn-primary btn-sm px-3 rounded-pill">
+                        <i class="bi bi-github me-1"></i> Repositorio
+                    </a>
+                    <a href="https://docs.google.com/document/d/17nWm1f5oAoxKf2vJK8UgGyVYW585SaMd8P7E5ueLkLE/edit?usp=sharing" target="_blank" class="btn btn-outline-secondary btn-sm px-3 rounded-pill">
+                        <i class="bi bi-file-earmark-text me-1"></i> Documentación
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Analizador de Privilegios</h5>
+                    <p class="card-text">Herramienta para automatizar la búsqueda de archivos con permisos de escritura (icacls) en Windows.</p>
+                    <span class="badge bg-secondary">CMD</span>
+                    <span class="badge bg-danger">Seguridad</span>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Portfolio Django</h5>
+                    <p class="card-text">Este mismo sitio web, desarrollado con arquitectura MVT, herencia de plantillas y Bootstrap 5.</p>
+                    <span class="badge bg-secondary">Django</span>
+                    <span class="badge bg-info text-dark">Frontend</span>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Ver detalles</a>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+services:
+  web:
+    build: .
+    container_name: portfolio
+    command: gunicorn mi_proyecto.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DEBUG=False
+    expose:
+      - "8000"
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_portfolio
+    ports:
+      - "8080:80"  # <--- CAMBIO AQUÍ: Windows 8080 -> Nginx 80
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - static_volume:/app/staticfiles:ro
+    depends_on:
+      - web
+
+volumes:
+  static_volume:
