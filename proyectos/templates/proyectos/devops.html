@@ -1,0 +1,79 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Mis Proyectos{% endblock %}
+
+{% block content %}
+<div class="py-5">
+    <h2 class="mb-4 text-center">Laboratorio Dev-Ops</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+<div class="col">
+    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <span class="p-2 bg-dark text-white rounded-3 me-2 fw-bold">D</span>
+                <h5 class="card-title text-dark fw-bold mb-0">Production-Ready Stack</h5>
+            </div>
+            
+            <p class="card-text text-secondary">
+                Arquitectura de despliegue contenerizada bajo el principio de <strong>Separation of Concerns</strong>. Implementé un <strong>Proxy Inverso con Nginx</strong> para la gestión eficiente de tráfico y archivos estáticos, orquestado con <strong>Docker Compose</strong>. Resolución técnica de conflictos de red y optimización de seguridad mediante <strong>headers HTTP personalizados</strong>.
+            </p>
+            
+            <div class="mb-4">
+                <span class="badge rounded-pill bg-primary">Docker</span>
+                <span class="badge rounded-pill bg-dark">Nginx (Alpine)</span>
+                <span class="badge rounded-pill bg-success">Django + Gunicorn</span>
+                <span class="badge rounded-pill bg-info text-dark">WSL2 / Linux</span>
+                <span class="badge rounded-pill bg-warning text-dark">Networking</span>
+            </div>
+            
+            <ul class="list-unstyled small text-muted mb-0">
+                <li><i class="bi bi-shield-check text-primary me-1"></i> Proxy Inverso & Offloading de estáticos</li>
+                <li><i class="bi bi-diagram-3 text-primary me-1"></i> Orquestación de Redes y Volúmenes</li>
+                <li><i class="bi bi-bug text-primary me-1"></i> Diagnóstico de conflictos (PID 4/Port 8080)</li>
+            </ul>
+        </div>
+        
+        <div class="card-footer bg-light border-0 p-4 pt-0 d-flex gap-2">
+            <a href="https://github.com/kvnn04/django-docker-nginx-portfolio" target="_blank" class="btn btn-dark btn-sm px-3 rounded-pill">
+                <i class="bi bi-github me-1"></i> Infra Repo
+            </a>
+            <a href="https://docs.google.com/document/d/1jlqkPo_PrpuKi44X9TI8G08O3Kv4Cfk96ZcEogeEJaA/edit?usp=sharing" target="_blank" class="btn btn-outline-secondary btn-sm px-3 rounded-pill">
+                <i class="bi bi-file-earmark-text me-1"></i> Documentación
+            </a>
+            <!-- <span class="text-muted small align-self-center ms-auto">Status: Stable</span> -->
+        </div>
+    </div>
+</div>
+        <!-- <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Analizador de Privilegios</h5>
+                    <p class="card-text">Herramienta para automatizar la búsqueda de archivos con permisos de escritura (icacls) en Windows.</p>
+                    <span class="badge bg-secondary">CMD</span>
+                    <span class="badge bg-danger">Seguridad</span>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Portfolio Django</h5>
+                    <p class="card-text">Este mismo sitio web, desarrollado con arquitectura MVT, herencia de plantillas y Bootstrap 5.</p>
+                    <span class="badge bg-secondary">Django</span>
+                    <span class="badge bg-info text-dark">Frontend</span>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Ver detalles</a>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+{% endblock %}

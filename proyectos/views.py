@@ -15,3 +15,12 @@ def proyecto_backend(request):
 
 def proyecto_frontend(request):
     return render(request=request, template_name='proyectos/frontend.html')
+
+def proyecto_fullstack(request):
+    return render(request=request, template_name='proyectos/fullstack.html')
+
+def proyecto_devops(request):
+    return render(request=request, template_name='proyectos/devops.html')
+
+def proyecto_redes(request):
+    return render(request=request, template_name='proyectos/redes.html')
