@@ -16,7 +16,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SECRET_KEY = getenv('SECRET_KEY', '')
+# Seguridad
+SECRET_KEY = getenv('SECRET_KEY', 'tu-clave-por-defecto-solo-para-dev')
+
+# DEBUG: Se vuelve True solo si en el .env dice exactamente True
+DEBUG = getenv('DEBUG', 'False') == 'True'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,12 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-lgll-jmkpfigvpm3o825&z@)oo)(fyl#xth7f2c%4@9e1p6skb'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+# ALLOWED_HOSTS: En producción, añade aquí tu dominio real
 ALLOWED_HOSTS = ['127.0.0.1','localhost','0.0.0.0']
 
 
@@ -125,7 +124,7 @@ USE_TZ = True
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'

@@ -1,7 +1,23 @@
-*.pyc
-__pycache__/
-db.sqlite3
-static_volume/
-staticfiles/
-*env
+# 1. Entorno Virtual (¡Nunca subir esto!)
 env/
+venv/
+ENV/
+
+# 2. Variables de Entorno (Datos sensibles / Secretos)
+.env
+
+# 3. Archivos de Python (Basura de compilación)
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# 4. Base de Datos (Si usas SQLite para pruebas locales)
+*.sqlite3
+
+# 5. Archivos de Docker y Estáticos generados
+# Nota: Los estáticos se generan en el servidor, no hace falta subirlos
+staticfiles/
+
+# 6. Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
