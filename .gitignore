@@ -21,3 +21,11 @@ staticfiles/
 # 6. Archivos del Sistema Operativo
 .DS_Store
 Thumbs.db
+# Docker y Nginx
+nginx/default.conf.ssl_backup
+nginx/default.conf.staging_backup
+nginx/default.conf.PROD_BACKUP
+
+# No subir los certificados si los copiaste por error a la carpeta del proyecto
+etc/letsencrypt/
+*.pyc

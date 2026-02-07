@@ -26,6 +26,7 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - static_volume:/app/staticfiles:ro
+      - /etc/letsencrypt:/etc/letsencrypt
     depends_on:
       - web
 
