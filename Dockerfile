@@ -10,7 +10,9 @@ WORKDIR /app
 
 # 4. Instalamos herramientas de Linux necesarias
 # Tip de Analista: Se mantienen las librerías necesarias para compilar paquetes
-RUN apk add --no-cache gcc musl-dev linux-headers libffi-dev
+RUN apk add --no-cache gcc musl-dev linux-headers libffi-dev python3-dev
+
+#    postgresql-dev  # Por si en el futuro pasas de SQLite a Postgres
 
 # 5. Instalamos tus librerías
 COPY requirements.txt /app/

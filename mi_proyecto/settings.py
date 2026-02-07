@@ -30,8 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # ALLOWED_HOSTS: En producción, añade aquí tu dominio real
-ALLOWED_HOSTS = ['127.0.0.1','localhost','0.0.0.0']
-
+ALLOWED_HOSTS = getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
 
 # Application definition
 

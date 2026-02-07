@@ -21,7 +21,8 @@ services:
     image: nginx:alpine
     container_name: nginx_portfolio
     ports:
-      - "8080:80"
+      - "80:80"
+      - "443:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - static_volume:/app/staticfiles:ro
