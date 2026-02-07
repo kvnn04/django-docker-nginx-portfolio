@@ -2,7 +2,7 @@ services:
   web:
     build: .
     container_name: portfolio
-    # Primero recolecta los archivos CSS/JS y luego inicia el servidor profesional Gunicorn
+    # Mantenemos el comando, pero ahora corre como django_user
     command: >
       sh -c "python manage.py collectstatic --noinput &&
              gunicorn mi_proyecto.wsgi:application --bind 0.0.0.0:8000"
@@ -16,6 +16,8 @@ services:
       - .env
     expose:
       - "8000"
+    # Seguridad extra: le decimos al compose que fuerce el usuario si fuera necesario
+    user: "1000:1000"
 
   nginx:
     image: nginx:alpine
@@ -25,8 +27,8 @@ services:
       - "443:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
-      - static_volume:/app/staticfiles:ro
-      - /etc/letsencrypt:/etc/letsencrypt
+      - static_volume:/app/staticfiles:ro # 'ro' significa Read-Only (Solo lectura), muy bien ahí.
+      - /etc/letsencrypt:/etc/letsencrypt:ro # También lo ponemos como solo lectura para Nginx
     depends_on:
       - web
 

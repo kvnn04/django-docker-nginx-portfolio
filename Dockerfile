@@ -1,31 +1,35 @@
-# 1. Imagen base de Python con Alpine
+# 1. Imagen base
 FROM python:3.13-alpine
 
-# 2. Configuración para que Python no dé problemas en Docker
+# 2. Configuración de Python
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# 3. Definimos dónde vivirá la app
+# 3. Definimos directorio de trabajo
 WORKDIR /app
 
-# 4. Instalamos herramientas de Linux necesarias
-# Tip de Analista: Se mantienen las librerías necesarias para compilar paquetes
-RUN apk add --no-cache gcc musl-dev linux-headers libffi-dev python3-dev
+# 4. Instalamos herramientas necesarias y creamos usuario de seguridad
+# Creamos un usuario llamado 'django_user' para no correr como root
+RUN apk add --no-cache gcc musl-dev linux-headers libffi-dev python3-dev \
+    && adduser -D django_user
 
-#    postgresql-dev  # Por si en el futuro pasas de SQLite a Postgres
-
-# 5. Instalamos tus librerías
+# 5. Instalamos librerías
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt --root-user-action=ignore
 
-# 6. Copiamos todo tu código al contenedor
+# 6. Copiamos el código
 COPY . /app/
 
-# 7. Creamos la carpeta de estáticos para que no haya problemas de permisos
-RUN mkdir -p /app/staticfiles
+# 7. Creamos carpeta de estáticos y ajustamos permisos
+# Es vital que el usuario sea dueño de la carpeta donde Django pondrá archivos
+RUN mkdir -p /app/staticfiles && \
+    chown -R django_user:django_user /app
 
-# 8. Puerto por defecto
+# 8. CAMBIO CLAVE: Cambiamos al usuario sin privilegios
+USER django_user
+
+# 9. Puerto
 EXPOSE 8000
 
-# 9. Comando por defecto (Opcional, ya que el Compose lo sobreescribe)
+# 10. Comando (Asegúrate de cambiar 'mi_proyecto' por el nombre real de tu carpeta)
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "mi_proyecto.wsgi:application"]
