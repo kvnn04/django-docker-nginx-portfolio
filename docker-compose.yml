@@ -2,13 +2,18 @@ services:
   web:
     build: .
     container_name: portfolio
-    command: gunicorn mi_proyecto.wsgi:application --bind 0.0.0.0:8000
+    # Primero recolecta los archivos CSS/JS y luego inicia el servidor profesional Gunicorn
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             gunicorn mi_proyecto.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - .:/app
       - static_volume:/app/staticfiles
     environment:
       - PYTHONUNBUFFERED=1
       - DEBUG=False
+    env_file:
+      - .env
     expose:
       - "8000"
 
@@ -16,7 +21,7 @@ services:
     image: nginx:alpine
     container_name: nginx_portfolio
     ports:
-      - "8080:80"  # <--- CAMBIO AQUÍ: Windows 8080 -> Nginx 80
+      - "8080:80"
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - static_volume:/app/staticfiles:ro
