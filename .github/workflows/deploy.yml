@@ -1,0 +1,24 @@
+name: Deploy Portfolio to AWS
+
+on:
+  push:
+    branches: [ main ] # Solo se activa cuando el código llega a main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/django-docker-nginx-portfolio
+            git pull origin main
+            docker compose up -d --build
+            docker system prune -f
