@@ -28,7 +28,7 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - static_volume:/app/staticfiles:ro # 'ro' significa Read-Only (Solo lectura), muy bien ahí.
-      - /etc/letsencrypt:/etc/letsencrypt:rw # También lo ponemos como solo lectura para Nginx
+      - /etc/letsencrypt:/etc/letsencrypt:ro # También lo ponemos como solo lectura para Nginx
     depends_on:
       - web
 
