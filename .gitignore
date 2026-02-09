@@ -31,3 +31,4 @@ etc/letsencrypt/
 *.pyc
 *.pem
 mi_clave_secreta.pem
+certbot/
