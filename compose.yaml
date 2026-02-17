@@ -22,7 +22,6 @@ services:
   nginx:
     image: nginx:alpine
     container_name: nginx_portfolio
-    user: "1000:1000"
     ports:
       - "80:80"
       - "443:443"
