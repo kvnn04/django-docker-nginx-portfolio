@@ -4,31 +4,46 @@
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
-<div class="row align-items-center py-5">
-    <!-- <div class="col-md-4 text-center">
-        <img src="{% static 'img/kuma_bienvenida.png' %}" class="img-fluid rounded-circle" alt="Kuma" style="max-height: 250px;">
-    </div> -->
-    <div class="col-md text-md-start text-center">
-    <h1 class="fw-bold mb-3" style="letter-spacing: -1.5px; line-height: 1.2; font-size: 3rem; color: #4a4a4a">
-        Hola, soy Kevin Alexandro Herrera
-    </h1>
-    
-    <p class="mb-4" style="font-size: 1.4rem; font-weight: 500; color: #4a4a4a; letter-spacing: -0.5px;">
-        Analista de Sistemas & Desarrollador de Software
-    </p>
+<div class="row align-items-center gx-lg-5 py-5">
+    <div class="col-lg-9 text-md-start text-center">
+        
+        <div class="d-inline-flex align-items-center mb-4 px-3 py-2 rounded-pill bg-primary bg-opacity-10 border border-primary border-opacity-25 shadow-sm">
+            <span class="p-1 bg-primary border border-light rounded-circle me-2"></span>
+            <span class="text-primary fw-bold small text-uppercase" style="letter-spacing: 0.5px;">
+                Explorando nuevas tecnologías & desafíos
+            </span>
+        </div>
 
-    <hr class="w-25 mx-md-0 mx-auto mb-4" style="border-top: 2px solid #4a4a4a; opacity: 0.8;">
+        <h1 class="display-1 fw-bold mb-0">Kevin Alexandro <span class="text-primary">Herrera</span></h1>
+        <p class="h3 text-muted border-top pt-2">Analista de Sistemas & Full Stack Developer</p>
 
-    <div style="font-size: 1.1rem; line-height: 1.8; color: #4a4a4a;">
-        <p class="mb-0">
-            Diseño y construyo aplicaciones web de <strong>alto rendimiento</strong>, fusionando lógica de negocio con interfaces modernas. Mi enfoque está en materializar soluciones digitales seguras, desde la<span class="bg-light px-1 rounded text-dark fw-medium">arquitectura del servidor</span> hasta la<span class="bg-light px-1 rounded text-dark fw-medium">experiencia final del usuario.</span>
-        </p>
+        <div class="mb-4 border-bottom border-primary border-5 rounded" style="width: 80px;"></div>
+
+        <div class="row">
+            <div class="col-xl-10">
+                <p class="lead fs-4 text-muted mb-5 lh-base">
+                    Especializado en el diseño y construcción de aplicaciones de 
+                    <span class="text-dark fw-semibold">alto rendimiento</span>. 
+                    Transformo necesidades complejas en soluciones digitales robustas, 
+                    asegurando la excelencia técnica desde el servidor hasta el usuario.
+                </p>
+                
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-md-start justify-content-center">
+                    <a href="#zonaproyectos" class="btn btn-primary btn-lg px-5 rounded-pill shadow fw-bold transition-base">
+                        Ver Portafolio
+                    </a>
+                    <a href="https://www.linkedin.com/in/kevin-herrera04" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill shadow-sm">
+                        <i class="bi bi-linkedin me-2"></i>LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>
-</div>
 
 
-<h2 class="text-center mt-5 pt-5 fw-bold">Zona de Laboratorios</h2>
+<h2 class="text-center mt-5 pt-5 fw-bold" id="zonaproyectos">Zona de Laboratorios</h2>
 <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 justify-content-start">
     <div class="col">
         <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
@@ -92,15 +107,6 @@
         </div>
     </div>
 
-    <!-- <div class="col">
-        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Seguridad Informatica</h3>
-                <p class="card-text">Identificación de vulnerabilidades, auditorías de sistemas y protección contra ataques web.</p>
-                <a href="{% url 'lista' %}" class="btn btn-outline-primary mt-auto">Ver Proyectos</a>
-            </div>
-        </div>
-    </div> -->
 </div>
 
 <section class="mt-5">
@@ -113,23 +119,30 @@
         <div class="row g-3">
             <div class="col-6 col-md-3">
                 <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-database display-6 text-dark"></i>
+                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
                     <h6 class="mt-2 fw-bold">SQL Server</h6>
                     <small class="text-muted d-block">Gestión de datos empresarial con alto enfoque en seguridad e integración con entornos Windows</small>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-database display-6 text-dark"></i>
+                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
                     <h6 class="mt-2 fw-bold">MySQL</h6>
                     <small class="text-muted d-block">Sistema de gestión de bases de datos relacionales robusto y escalable para producción</small>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-database display-6 text-dark"></i>
+                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
                     <h6 class="mt-2 fw-bold">SQLite</h6>
                     <small class="text-muted d-block">Base de datos ligera y portable, ideal para desarrollo, testing y aplicaciones locales</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+            <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
+                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
+                    <h6 class="mt-2 fw-bold">PostgreSQL</h6>
+                    <small class="text-muted d-block">Sistema relacional de alto rendimiento, escalable y robusto para entornos de producción críticos.</small>
                 </div>
             </div>
     
@@ -222,27 +235,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="mb-5">
-        <h4 class="text-danger border-bottom pb-2 mb-4">
-            <i class="bi bi-shield-lock me-2"></i>Seguridad y Redes
-        </h4>
-        <div class="row g-3">
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-terminal display-6 text-secondary"></i>
-                    <h6 class="mt-2 fw-bold">NADA</h6>
-                    <small class="text-muted d-block">NADA</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-terminal display-6 text-secondary"></i>
-                    <h6 class="mt-2 fw-bold">NADA</h6>
-                    <small class="text-muted d-block">NADA</small>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </section>
 
 <section id="sobre-mi" class="py-5">
