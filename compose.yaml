@@ -22,6 +22,7 @@ services:
   nginx:
     image: nginx:alpine
     container_name: nginx_portfolio
+    user: "1000:1000"
     ports:
       - "80:80"
       - "443:443"
@@ -29,6 +30,12 @@ services:
       - ./nginx:/etc/nginx/conf.d
       - static_volume:/app/staticfiles:ro # 'ro' significa Read-Only (Solo lectura), muy bien ahí.
       - /etc/letsencrypt:/etc/letsencrypt:ro # También lo ponemos como solo lectura para Nginx
+      - ./logs/nginx:/var/log/nginx  # Para tu Fail2Ban
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
     depends_on:
       - web
 

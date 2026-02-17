@@ -32,3 +32,5 @@ etc/letsencrypt/
 *.pem
 mi_clave_secreta.pem
 certbot/
+
+/logs
