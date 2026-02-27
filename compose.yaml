@@ -20,7 +20,8 @@ services:
     user: "1000:1000"
 
   nginx:
-    image: nginx:alpine
+#    image: nginx:stable-alpine3.23
+    build: ./nginx
     container_name: nginx_portfolio
     ports:
       - "80:80"

@@ -127,3 +127,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Seguridad de Frames (Clickjacking)
+X_FRAME_OPTIONS = 'DENY'
+
+# Otras cabeceras de seguridad que Django puede manejar por ti
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
