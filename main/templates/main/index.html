@@ -1,275 +1,298 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}Inicio{% endblock %}
+{% block title %}Kevin Herrera | Inicio{% endblock %}
 
 {% block content %}
-<div class="row align-items-center gx-lg-5 py-5">
-    <div class="col-lg-9 text-md-start text-center">
-        
-        <div class="d-inline-flex align-items-center mb-4 px-3 py-2 rounded-pill bg-primary bg-opacity-10 border border-primary border-opacity-25 shadow-sm">
-            <span class="p-1 bg-primary border border-light rounded-circle me-2"></span>
-            <span class="text-primary fw-bold small text-uppercase" style="letter-spacing: 0.5px;">
-                Explorando nuevas tecnologías & desafíos
-            </span>
-        </div>
 
-        <h1 class="display-1 fw-bold mb-0">Kevin Alexandro <span class="text-primary">Herrera</span></h1>
-        <p class="h3 text-muted border-top pt-2">Analista de Sistemas & Full Stack Developer</p>
+<section id="inicio" class="hero-section mb-5" data-aos="fade-down">
+    <div class="row align-items-center gx-5">
+        <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-delay="100">
+            <div class="d-inline-flex align-items-center mb-4 px-3 py-2 rounded-pill bg-primary bg-opacity-10 border border-primary border-opacity-25 shadow-sm badge-pulse">
+                <span class="p-1 bg-primary border border-light rounded-circle me-2"></span>
+                <span class="text-primary fw-bold small text-uppercase" style="letter-spacing: 0.5px;">
+                    Explorando nuevas tecnologías & desafíos
+                </span>
+            </div>
 
-        <div class="mb-4 border-bottom border-primary border-5 rounded" style="width: 80px;"></div>
+            <h1 class="display-1 fw-bold mb-0">Kevin <span class="text-primary">Herrera</span></h1>
+            <p class="h4 text-muted border-top pt-2 fw-normal">Desarrollador Full Stack & Estudiante de Análisis de Sistemas</p>
 
-        <div class="row">
-            <div class="col-xl-10">
-                <p class="lead fs-4 text-muted mb-5 lh-base">
-                    Especializado en el diseño y construcción de aplicaciones de 
-                    <span class="text-dark fw-semibold">alto rendimiento</span>. 
-                    Transformo necesidades complejas en soluciones digitales robustas, 
-                    asegurando la excelencia técnica desde el servidor hasta el usuario.
-                </p>
-                
-                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-md-start justify-content-center">
-                    <a href="#zonaproyectos" class="btn btn-primary btn-lg px-5 rounded-pill shadow fw-bold transition-base">
-                        Ver Portafolio
-                    </a>
-                    <a href="https://www.linkedin.com/in/kevin-herrera04" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill shadow-sm">
-                        <i class="bi bi-linkedin me-2"></i>LinkedIn
-                    </a>
-                </div>
+            <div class="mb-4 border-bottom border-primary border-5 rounded" style="width: 80px;"></div>
+
+            <p class="lead fs-5 text-muted mb-4 lh-base">
+                Desarrollador de Software Full Stack y estudiante avanzado de
+                <span class="text-dark fw-semibold">Análisis de Sistemas</span>.
+                Enfocado en el desarrollo de aplicaciones web, diseño de
+                <span class="text-dark fw-semibold">APIs REST</span>,
+                arquitectura de datos y automatización de procesos operativos.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-lg-start justify-content-center">
+                <a href="#zonaproyectos" class="btn btn-primary btn-lg px-5 rounded-pill shadow fw-bold transition-base">
+                    Ver Portafolio
+                </a>
+                <a href="https://www.linkedin.com/in/kevin-herrera04" target="_blank" class="btn btn-outline-dark btn-lg px-4 rounded-pill shadow-sm">
+                    <i class="bi bi-linkedin me-2"></i>LinkedIn
+                </a>
+                <a href="{% static 'pdf/Kevin_Alexandro_Herrera.pdf' %}?v=2" target="_blank" class="btn btn-outline-success btn-lg px-4 rounded-pill shadow-sm">
+                    <i class="bi bi-file-earmark-pdf me-2"></i>CV
+                </a>
             </div>
         </div>
-        
+
+        {% comment %}
+        <div class="col-lg-5 text-center mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+            <div class="hero-avatar-placeholder rounded-circle d-inline-flex align-items-center justify-content-center text-white shadow-lg">
+                KH
+            </div>
+            <p class="text-muted small mt-2"><i class="bi bi-camera me-1"></i> Agregá tu foto en <code>static/img/</code></p>
+        </div>
+        {% endcomment %}
+    </div>
+</section>
+
+
+<h2 class="text-center fw-bold section-title" id="zonaproyectos" data-aos="fade-up">Zona de Laboratorios</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-2 justify-content-start project-card">
+    <div class="col" data-aos="fade-up" data-aos-delay="50">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center border-top border-4" style="border-top-color: #0d6efd !important;">
+            <div class="card-body d-flex flex-column">
+                <i class="bi bi-database display-5 text-primary mb-2"></i>
+                <h3 class="card-title h5">Base de Datos</h3>
+                <p class="card-text small text-muted flex-grow-1">Diseño de esquemas relacionales, normalización 3NF, optimización de consultas SQL y gestión de integridad de datos.</p>
+                <a href="{% url 'base_de_datos' %}" class="btn card-btn btn-sm rounded-pill px-4 mt-auto" style="background:#0d6efd;color:#fff;">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center border-top border-4" style="border-top-color: #343a40 !important;">
+            <div class="card-body d-flex flex-column">
+                <i class="bi bi-server display-5 text-dark mb-2"></i>
+                <h3 class="card-title h5">Back-End</h3>
+                <p class="card-text small text-muted flex-grow-1">Desarrollo de APIs REST modulares con Django REST Framework, FastAPI y Flask. Lógica de negocio avanzada, JWT y SOLID.</p>
+                <a href="{% url 'backend' %}" class="btn card-btn btn-sm rounded-pill px-4 mt-auto" style="background:#343a40;color:#fff;">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col" data-aos="fade-up" data-aos-delay="150">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center border-top border-4" style="border-top-color: #6f42c1 !important;">
+            <div class="card-body d-flex flex-column">
+                <i class="bi bi-display display-5 mb-2" style="color:#6f42c1;"></i>
+                <h3 class="card-title h5">Front-End</h3>
+                <p class="card-text small text-muted flex-grow-1">Interfaces de usuario dinámicas y responsivas con Bootstrap 5, HTML5, CSS3 y JavaScript. UX/UI y pasarelas de pago.</p>
+                <a href="{% url 'frontend' %}" class="btn card-btn btn-sm rounded-pill px-4 mt-auto" style="background:#6f42c1;color:#fff;">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center border-top border-4" style="border-top-color: #fd7e14 !important;">
+            <div class="card-body d-flex flex-column">
+                <i class="bi bi-stack display-5 mb-2" style="color:#fd7e14;"></i>
+                <h3 class="card-title h5">Fullstack</h3>
+                <p class="card-text small text-muted flex-grow-1">Desarrollo End-to-End: integración total entre lógica de servidor, base de datos y experiencias de usuario dinámicas.</p>
+                <a href="{% url 'fullstack' %}" class="btn card-btn btn-sm rounded-pill px-4 mt-auto" style="background:#fd7e14;color:#fff;">Ver Proyectos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col" data-aos="fade-up" data-aos-delay="250">
+        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center border-top border-4" style="border-top-color: #dc3545 !important;">
+            <div class="card-body d-flex flex-column">
+                <i class="bi bi-gear-wide-connected display-5 text-danger mb-2"></i>
+                <h3 class="card-title h5">DevOps</h3>
+                <p class="card-text small text-muted flex-grow-1">Contenerización con Docker, proxy inverso con Nginx, CI/CD automatizado con GitHub Actions y despliegue en AWS.</p>
+                <a href="{% url 'devops' %}" class="btn card-btn btn-sm rounded-pill px-4 mt-auto" style="background:#dc3545;color:#fff;">Ver Proyectos</a>
+            </div>
+        </div>
     </div>
 </div>
 
 
-<h2 class="text-center mt-5 pt-5 fw-bold" id="zonaproyectos">Zona de Laboratorios</h2>
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-2 justify-content-start">
-    <div class="col">
-        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Base de Datos</h3>
-                <p class="card-text">Diseño de esquemas relacionales, optimización de consultas SQL y gestión de integridad de datos.</p>
-                <a href="{% url 'base_de_datos' %}" class="btn btn-outline-primary mt-auto" style="background: #28a745; color: white;">Ver Proyectos</a>
-            </div>
+<section class="mt-5 pt-4" data-aos="fade-up">
+    <h2 class="text-center fw-bold section-title">Stack Tecnológico</h2>
+
+    <div class="mb-4">
+        <h6 class="fw-bold text-primary mb-3"><i class="bi bi-server me-2"></i>Base de datos</h6>
+        <div class="d-flex flex-wrap gap-2">
+            <span class="tech-badge" title="Gestión de datos empresarial con alto enfoque en seguridad"><i class="bi bi-database-fill-gear text-primary"></i> SQL Server</span>
+            <span class="tech-badge" title="Sistema de gestión de bases de datos relacional robusto"><i class="bi bi-database-fill text-success"></i> MySQL</span>
+            <span class="tech-badge" title="Base de datos ligera y portable, ideal para desarrollo y testing"><i class="bi bi-database text-warning"></i> SQLite</span>
+            <span class="tech-badge" title="Sistema relacional de alto rendimiento para entornos de producción críticos"><i class="bi bi-database-fill-check text-info"></i> PostgreSQL</span>
         </div>
     </div>
 
-    <div class="col">
-        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Back-End</h3>
-                <p class="card-text">Desarrollo de lógica de servidor robusta, creación de APIs REST y manejo de autenticación segura.</p>
-                <a href="{% url 'backend' %}" class="btn btn-outline-primary mt-auto" style="background: #28a745; color: white;">Ver Proyectos</a>
-            </div>
+    <div class="mb-4">
+        <h6 class="fw-bold text-info mb-3"><i class="bi bi-code-square me-2"></i>Desarrollo Backend</h6>
+        <div class="d-flex flex-wrap gap-2">
+            <span class="tech-badge" title="Framework robusto para aplicaciones de gran escala"><i class="bi bi-filetype-py text-primary"></i> Django</span>
+            <span class="tech-badge" title="APIs de alto rendimiento con validación automática"><i class="bi bi-filetype-py text-success"></i> FastAPI</span>
+            <span class="tech-badge" title="Estructuras modulares y minimalistas para servicios web"><i class="bi bi-filetype-py text-secondary"></i> Flask</span>
+            <span class="tech-badge" title="Programación orientada a objetos con .NET"><i class="bi bi-filetype-cs text-primary"></i> C# / .NET</span>
+            <span class="tech-badge" title="Lenguaje versátil para aplicaciones web dinámicas"><i class="bi bi-filetype-js text-warning"></i> JavaScript</span>
+            <span class="tech-badge" title="Framework cross-platform para apps móviles nativas"><i class="bi bi-phone text-success"></i> Flutter</span>
         </div>
     </div>
 
-    <div class="col">
-        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Front-End</h3>
-                <p class="card-text">Interfaces de usuario dinámicas y responsivas enfocadas en la experiencia del usuario.</p>
-                <a href="{% url 'frontend' %}" class="btn btn-outline-primary mt-auto" style="background: #28a745; color: white;">Ver Proyectos</a>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Fullstack</h3>
-                <p class="card-text">Desarrollo End-to-End: Integración total entre lógica de servidor y experiencias de usuario dinámicas.</p>
-                <a href="{% url 'fullstack' %}" class="btn btn-outline-primary mt-auto" style="background: #28a745; color: white;">Ver Proyectos</a>
-            </div>
+    <div class="mb-4">
+        <h6 class="fw-bold" style="color:#7952b3;"><i class="bi bi-tools me-2"></i>Frontend</h6>
+        <div class="d-flex flex-wrap gap-2">
+            <span class="tech-badge" title="Estructuración semántica y diseño visual moderno"><i class="bi bi-filetype-html text-danger"></i> HTML5 / CSS3</span>
+            <span class="tech-badge" title="Framework de diseño ágil para sitios adaptativos"><i class="bi bi-bootstrap" style="color:#7952b3;"></i> Bootstrap 5</span>
         </div>
     </div>
 
-    <div class="col">
-        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">DevOps</h3>
-                    <p class="card-text">
-                        Optimización del ciclo de vida de software mediante la automatización, 
-                        gestión de infraestructura y la integración continua entre desarrollo y operaciones.
-                    </p>
-                <a href="{% url 'devops' %}" class="btn btn-outline-primary mt-auto" style="background: #28a745; color: white;">Ver Proyectos</a>
-            </div>
+    <div class="mb-4">
+        <h6 class="fw-bold text-warning mb-3"><i class="bi bi-gear me-2"></i>Herramientas & Ofimática</h6>
+        <div class="d-flex flex-wrap gap-2">
+            <span class="tech-badge" title="Automatización de tareas repetitivas en Excel y Outlook"><i class="bi bi-file-earmark-excel text-success"></i> VBA</span>
+            <span class="tech-badge" title="Control de versiones distribuido"><i class="bi bi-git text-warning"></i> Git / GitHub</span>
         </div>
     </div>
 
-    <div class="col">
-        <div class="card shadow-sm p-3 h-100 d-flex flex-column text-center">
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Redes</h3>
-                <p class="card-text">Configuración de infraestructuras, análisis de protocolos y gestión de tráfico de red.</p>
-                <a href="{% url 'redes' %}" class="btn btn-outline-primary mt-auto" style="background: #28a745; color: white;">Ver Proyectos</a>
-            </div>
+    <div class="mb-4">
+        <h6 class="fw-bold text-danger mb-3"><i class="bi bi-terminal-fill me-2"></i>Sistemas, DevOps & Metodologías</h6>
+        <div class="d-flex flex-wrap gap-2">
+            <span class="tech-badge" title="Administración de sistemas y scripting"><i class="bi bi-terminal text-secondary"></i> Linux / Bash</span>
+            <span class="tech-badge" title="Automatización de entornos Windows"><i class="bi bi-windows text-primary"></i> PowerShell</span>
+            <span class="tech-badge" title="Contenerización de aplicaciones"><i class="bi bi-box text-info"></i> Docker</span>
+            <span class="tech-badge" title="Gestión de proyectos con sprints iterativos"><i class="bi bi-arrow-repeat text-success"></i> Scrum</span>
         </div>
     </div>
+</section>
 
-</div>
 
-<section class="mt-5">
-    <h2 class="text-center mb-5 fw-bold">Stack Tecnológico</h2>
+<section id="experiencia" class="py-5" data-aos="fade-up">
+    <h2 class="fw-bold mb-5 text-center section-title">Experiencia Laboral</h2>
 
-        <div class="mb-5">
-        <h4 class="text-primary border-bottom pb-2 mb-4">
-            <i class="bi bi-server me-2"></i>Base de datos
-        </h4>
-        <div class="row g-3">
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
-                    <h6 class="mt-2 fw-bold">SQL Server</h6>
-                    <small class="text-muted d-block">Gestión de datos empresarial con alto enfoque en seguridad e integración con entornos Windows</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
-                    <h6 class="mt-2 fw-bold">MySQL</h6>
-                    <small class="text-muted d-block">Sistema de gestión de bases de datos relacionales robusto y escalable para producción</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
-                    <h6 class="mt-2 fw-bold">SQLite</h6>
-                    <small class="text-muted d-block">Base de datos ligera y portable, ideal para desarrollo, testing y aplicaciones locales</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-            <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-database-fill-gear display-6 text-primary"></i>
-                    <h6 class="mt-2 fw-bold">PostgreSQL</h6>
-                    <small class="text-muted d-block">Sistema relacional de alto rendimiento, escalable y robusto para entornos de producción críticos.</small>
-                </div>
-            </div>
-    
+    <div class="card shadow-sm border-0 p-4">
+        <div class="timeline-item">
+            <span class="timeline-date">Feb 2025 — Jun 2026</span>
+            <h4 class="fw-bold mb-1">Analista en Cobranzas Digitales</h4>
+            <h5 class="text-primary mb-2">Efectivo Sí <span class="text-muted fw-normal small">· Buenos Aires, Argentina</span></h5>
+            <ul class="list-unstyled small text-muted">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Automaticé el <strong>70% del flujo de procesamiento manual</strong> de pagos mediante una aplicación web propia (HTML, CSS, JavaScript), optimizando drásticamente los tiempos de respuesta del equipo.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Diseñé y desarrollé soluciones web para el procesamiento automatizado de pagos de agencias externas y conciliación de transferencias vs. extractos bancarios.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Implementé integración de <strong>Outlook y Excel mediante VBA</strong> para automatizar el registro de imputación de transferencias, validando dominios corporativos para garantizar la seguridad de los datos.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Optimicé la gestión de procesos manuales para actualización de registros históricos y flujos de pagos complejos mediante estandarización de datos.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Participé en la calibración y optimización de un <strong>Agente de IA Conversacional</strong> enfocado en la estrategia de cobranzas, mejorando la fluidez del diálogo y la tasa de resolución automatizada.</li>
+            </ul>
         </div>
     </div>
+</section>
 
-    <div class="mb-5">
-        <h4 class="text-info border-bottom pb-2 mb-4">
-            <i class="bi bi-code-square me-2"></i>Desarrollo Backend
-        </h4>
-        <div class="row g-3">
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-filetype-py display-6 text-primary"></i>
-                    <h6 class="mt-2 fw-bold">Python / Django</h6>
-                    <small class="text-muted d-block">Framework robusto para aplicaciones de gran escala.</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-filetype-py display-6 text-primary"></i>
-                    <h6 class="mt-2 fw-bold">Python / Fastapi</h6>
-                    <small class="text-muted d-block">APIs de alto rendimiento con validación de datos automática.</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-filetype-py display-6 text-primary"></i>
-                    <h6 class="mt-2 fw-bold">Python / Flask</h6>
-                    <small class="text-muted d-block">Estructuras modulares y minimalistas para servicios web escalables.</small>
+
+<section id="educacion" class="py-5" data-aos="fade-up">
+    <h2 class="fw-bold mb-5 text-center section-title">Educación</h2>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100 p-3">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="p-2 bg-primary text-white rounded-3 me-3"><i class="bi bi-mortarboard-fill"></i></span>
+                        <div>
+                            <h5 class="fw-bold mb-0 small">Técnico Superior en Análisis de Sistemas</h5>
+                            <small class="text-muted">Instituto Superior Don Bosco Pío IX</small>
+                        </div>
+                    </div>
+                    <p class="text-muted small">Mar 2024 — Presente</p>
+                    <div class="progress progress-thin mb-2" role="progressbar" aria-label="Progreso académico" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 83%;"></div>
+                    </div>
+                    <small class="text-muted fw-semibold">83% completado — Último cuatrimestre</small>
+                    <ul class="list-unstyled small mt-3 mb-0">
+                        <li class="mb-1"><i class="bi bi-dot text-primary"></i> Desarrollo & Arquitectura: SDLC, patrones de diseño, APIs REST, POO</li>
+                        <li class="mb-1"><i class="bi bi-dot text-primary"></i> Bases de Datos & Redes: Modelado SQL, administración de sistemas</li>
+                        <li class="mb-1"><i class="bi bi-dot text-primary"></i> Gestión de Proyectos: Scrum, factibilidad técnica</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="mb-5">
-        <h4 class="text-success border-bottom pb-2 mb-4">
-            <i class="bi bi-tools me-2"></i>Frontend
-        </h4>
-        <div class="row g-3">
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-bootstrap display-6" style="color: #7952b3;"></i>
-                    <h6 class="mt-2 fw-bold">HTML 5 / CSS 3 / JS</h6>
-                    <small class="text-muted d-block">Estructuración semántica y diseño visual moderno</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-bootstrap display-6" style="color: #7952b3;"></i>
-                    <h6 class="mt-2 fw-bold">Bootstrap 5</h6>
-                    <small class="text-muted d-block">Framework de diseño ágil para la creación de sitios adaptativos</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mb-5">
-        <h4 class="text-success border-bottom pb-2 mb-4">
-            <i class="bi bi-git me-2"></i>DevTools
-        </h4>
-        <div class="row g-3">
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-git display-6 text-warning"></i>
-                    <h6 class="mt-2 fw-bold">Git / GitHub / GitLab</h6>
-                    <small class="text-muted d-block">Control de versiones distribuido para el seguimiento de cambios y gestión de ramas</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="mb-5">
-        <h4 class="text-danger border-bottom pb-2 mb-4">
-            <i class="bi bi-terminal-fill me-2"></i>Sistemas y Automatización
-        </h4>
-        <div class="row g-3">
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-terminal display-6 text-secondary"></i>
-                    <h6 class="mt-2 fw-bold">Linux / Bash</h6>
-                    <small class="text-muted d-block">Administración de sistemas y automatización de tareas mediante scripting en Bash</small>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-3 border rounded shadow-sm bg-light h-100 text-center">
-                    <i class="bi bi-terminal display-6 text-secondary"></i>
-                    <h6 class="mt-2 fw-bold">Windows / Powershell / CMD</h6>
-                    <small class="text-muted d-block">Automatización de configuraciones y gestión de entornos Windows mediante shell de comandos avanzado</small>
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100 p-3">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="p-2 bg-success text-white rounded-3 me-3"><i class="bi bi-laptop"></i></span>
+                        <div>
+                            <h5 class="fw-bold mb-0 small">Técnico en Programación en Software Libre</h5>
+                            <small class="text-muted">Instituto Sagrado Corazón ALCAL</small>
+                        </div>
+                    </div>
+                    <p class="text-muted small">Mar 2016 — Dic 2022</p>
+                    <ul class="list-unstyled small mt-2 mb-0">
+                        <li class="mb-1"><i class="bi bi-dot text-success"></i> Formación técnica de 7 años orientada a lógica de programación</li>
+                        <li class="mb-1"><i class="bi bi-dot text-success"></i> Estructuras de datos, desarrollo de algoritmos y tecnologías Open Source</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="sobre-mi" class="py-5">
-    <div class="row align-items-center">
-<div class="col-md-7 py-2">
-    <h2 class="fw-bold mb-4 text-dark" style="letter-spacing: -1px;">
-        Sobre mí
-    </h2>
-    
-    <div class="about-text" style="font-size: 1.1rem; line-height: 1.8; color: #4a4a4a;">
-        
-        <p class="mb-4" style="font-weight: 500; color: #4a4a4a;">
-            Soy un apasionado de la tecnología con una <strong>mentalidad autodidacta</strong>: creo que la capacidad de aprender constantemente es lo que separa a un buen desarrollador de uno excepcional.
-        </p>
 
-        <p class="mb-4">
-            Mi formación como <strong>Analista de Sistemas</strong> me dio las bases, pero mi curiosidad me impulsa a ir siempre al límite de mis soluciones. No me conformo con que algo "funcione"; busco la arquitectura más limpia y el método más eficiente para lograr el <span class="bg-light px-1 rounded text-dark fw-medium">máximo impacto con la menor complejidad.</span>
-        </p>
-        
-        <p class="mb-0">
-            Me especializo en diseñar sistemas donde la <strong>seguridad y el rendimiento</strong> no son un añadido, sino el núcleo del desarrollo. Aplico esta filosofía de optimización en cada despliegue, buscando siempre soluciones robustas que garanticen una estructura impecable y una escalabilidad real.
-        </p>
+<section id="certificaciones" class="py-5" data-aos="fade-up">
+    <h2 class="fw-bold mb-5 text-center section-title">Certificaciones</h2>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-6">
+            <div class="card shadow-sm border-0 h-100 text-center p-4 cert-card">
+                <i class="bi bi-filetype-py display-4 text-primary mb-2"></i>
+                <h6 class="fw-bold small">Python for Data Science</h6>
+                <p class="text-muted small mb-2">IBM</p>
+                <span class="badge cert-badge px-3 py-1 mx-auto">2023</span>
+            </div>
+        </div>
+        <div class="col-md-4 col-6">
+            <div class="card shadow-sm border-0 h-100 text-center p-4 cert-card">
+                <i class="bi bi-bar-chart-line display-4 text-success mb-2"></i>
+                <h6 class="fw-bold small">Data Analysis with Python</h6>
+                <p class="text-muted small mb-2">IBM</p>
+                <span class="badge cert-badge px-3 py-1 mx-auto">2023</span>
+            </div>
+        </div>
+        <div class="col-md-4 col-6">
+            <div class="card shadow-sm border-0 h-100 text-center p-4 cert-card">
+                <i class="bi bi-eye display-4 text-warning mb-2"></i>
+                <h6 class="fw-bold small">Data Visualization with Python</h6>
+                <p class="text-muted small mb-2">IBM</p>
+                <span class="badge cert-badge px-3 py-1 mx-auto">2023</span>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
+
+<section id="sobre-mi" class="py-5" data-aos="fade-up">
+    <h2 class="fw-bold mb-5 text-center section-title">Sobre mí</h2>
+    <div class="row align-items-center g-4">
+        <div class="col-md-7">
+            <div class="about-text" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);">
+                <p class="mb-3 fw-medium">
+                    Soy un apasionado de la tecnología con una <strong>mentalidad autodidacta</strong>: creo que la capacidad de aprender constantemente es lo que separa a un buen desarrollador de uno excepcional.
+                </p>
+                <p class="mb-3">
+                    Mi formación como <strong>Analista de Sistemas</strong> me dio las bases, pero mi curiosidad me impulsa a ir siempre al límite de mis soluciones. No me conformo con que algo "funcione"; busco la arquitectura más limpia y el método más eficiente.
+                </p>
+
+            </div>
+        </div>
 
         <div class="col-md-5">
-            <div class="card border-0 shadow-sm bg-dark text-white p-4">
-                <h4 class="h5 mb-3 text-primary">Información Clave</h4>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> Ubicación: Buenos Aires, Argentina</li>
-                    <li class="mb-2"><i class="bi bi-mortarboard me-2 text-primary"></i> Formación: Analista de Sistemas</li>
-                    <li class="mb-2"><i class="bi bi-translate me-2 text-primary"></i> Idiomas: Español / Inglés (Técnico)</li>
-                    <li class="mb-2"><i class="bi bi-check-circle me-2 text-primary"></i> Disponibilidad: Proyectos Full-time / Freelance</li>
+            <div class="card border-0 shadow-lg about-card text-white p-4">
+                <h4 class="h5 mb-3 text-primary"><i class="bi bi-info-circle me-2"></i>Información Clave</h4>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><i class="bi bi-phone me-2 text-primary"></i> +54 11 5135-1658</li>
+                    <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> CABA, Buenos Aires, Argentina</li>
+                    <li class="mb-2"><i class="bi bi-mortarboard me-2 text-primary"></i> Analista de Sistemas (83%)</li>
+                    <li class="mb-2"><i class="bi bi-translate me-2 text-primary"></i> Español / Inglés Técnico</li>
+                    <li class="mb-2"><i class="bi bi-globe me-2 text-primary"></i> <a href="https://kevinntech.com" target="_blank" class="text-white-50">kevinntech.com</a></li>
+                    <li class="mb-2"><i class="bi bi-check-circle me-2 text-primary"></i> Full-time / Freelance</li>
                 </ul>
-                <a href="{% static 'pdf/Kevin_Alexandro_Herrera.pdf' %}" class="btn btn-primary w-100 mt-3" target="_blank">
+                <a href="{% static 'pdf/Kevin_Alexandro_Herrera.pdf' %}?v=2" class="btn btn-primary w-100 mt-2" target="_blank">
                     <i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV
                 </a>
             </div>

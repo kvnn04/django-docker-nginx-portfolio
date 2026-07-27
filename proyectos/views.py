@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def lista_proyectos(request):
-    return render(request=request, template_name='proyectos/lista.html')
+    return render(request=request, template_name='proyectos/backend.html')
 
 def proyecto_database(request):
     return render(request=request, template_name='proyectos/base_de_datos.html')
@@ -22,5 +22,5 @@ def proyecto_fullstack(request):
 def proyecto_devops(request):
     return render(request=request, template_name='proyectos/devops.html')
 
-def proyecto_redes(request):
-    return render(request=request, template_name='proyectos/redes.html')
+# def proyecto_redes(request):
+#     return render(request=request, template_name='proyectos/redes.html')

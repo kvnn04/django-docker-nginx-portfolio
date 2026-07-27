@@ -1,65 +1,103 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Portfolio{% endblock %}</title>
+    <title>{% block title %}Kevin Herrera | Portfolio{% endblock %}</title>
+    <meta name="description" content="Portfolio profesional de Kevin Herrera - Desarrollador Full Stack & Analista de Sistemas. Django, FastAPI, Docker, Nginx, CI/CD.">
+    <meta name="author" content="Kevin Herrera">
+    <meta property="og:title" content="Kevin Herrera | Full Stack Developer">
+    <meta property="og:description" content="Desarrollador Full Stack & Estudiante de Análisis de Sistemas. Especializado en Django, FastAPI, Docker y automatización.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kevinntech.com">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-          rel="stylesheet" 
-          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
           crossorigin="anonymous">
 
-    <link rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" 
-      integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" 
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+"
       crossorigin="anonymous">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/kuma_bienvenida.png' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Dev</a>
+            <a class="navbar-brand" href="{% url 'home' %}">KH</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ms-auto">
+                <div class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
                     <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                    <a class="nav-link" href="{% url 'home' %}#zonaproyectos">Proyectos</a>
+                    <a class="nav-link" href="{% url 'home' %}#experiencia">Experiencia</a>
+                    <a class="nav-link" href="{% url 'home' %}#sobre-mi">Sobre mí</a>
                     <a class="nav-link" href="#contacto">Contacto</a>
+                    <li class="nav-item list-unstyled ms-lg-2">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-light rounded-circle px-2 py-1" title="Alternar modo oscuro" style="width:38px;height:38px;">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5 pt-4"> {% block content %}
+    <div class="container mt-5 pt-4">
+        {% block content %}
         {% endblock %}
     </div>
 
+    <button id="back-to-top" class="back-to-top" title="Volver arriba">
+        <i class="bi bi-chevron-up fs-5"></i>
+    </button>
+
     <footer class="text-center py-5 bg-light mt-5 border-top">
         <div class="container">
-            <p class="text-muted mb-4 text-uppercase fw-bold" id='contacto' style="letter-spacing: 1px;">Conectemos</p>
+            <p class="text-muted mb-4 text-uppercase fw-bold" id="contacto" style="letter-spacing: 1px;">Conectemos</p>
 
             <div class="d-flex justify-content-center gap-3 mb-4">
                 <a href="https://www.linkedin.com/in/kevin-herrera04" target="_blank"
                    class="btn btn-social btn-outline-primary rounded-circle d-flex align-items-center justify-content-center"
-                   style="width: 45px; height: 45px;" title="LinkedIn">
+                   style="width: 48px; height: 48px;" title="LinkedIn">
                     <i class="bi bi-linkedin fs-5"></i>
                 </a>
 
                 <a href="https://github.com/kvnn04" target="_blank"
                    class="btn btn-social btn-outline-dark rounded-circle d-flex align-items-center justify-content-center"
-                   style="width: 45px; height: 45px;" title="GitHub">
+                   style="width: 48px; height: 48px;" title="GitHub">
                     <i class="bi bi-github fs-5"></i>
                 </a>
 
                 <a href="mailto:kvnherrera.04@gmail.com"
                    class="btn btn-social btn-outline-danger rounded-circle d-flex align-items-center justify-content-center"
-                   style="width: 45px; height: 45px;" title="Enviar Email">
+                   style="width: 48px; height: 48px;" title="Enviar Email">
                     <i class="bi bi-envelope-fill fs-5"></i>
                 </a>
+
+                <a href="https://wa.me/541151351658" target="_blank"
+                   class="btn btn-social btn-outline-success rounded-circle d-flex align-items-center justify-content-center"
+                   style="width: 48px; height: 48px;" title="WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+            </div>
+
+            <div class="d-flex justify-content-center gap-4 mb-3 flex-wrap small">
+                <span class="text-muted"><i class="bi bi-phone me-1"></i> +54 11 5135-1658</span>
+                <span class="text-muted"><i class="bi bi-envelope me-1"></i> kvnherrera.04@gmail.com</span>
+                <a href="https://kevinntech.com" target="_blank" class="text-muted text-decoration-none"><i class="bi bi-globe me-1"></i> kevinntech.com</a>
             </div>
 
             <p class="mb-0 text-secondary">&copy; 2026 <strong>Kevin Herrera</strong> | Construyendo Software Seguro</p>
@@ -67,8 +105,60 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 600, once: true, offset: 100 });
+
+        (function() {
+            var html = document.documentElement;
+            var toggle = document.getElementById('theme-toggle');
+            var saved = localStorage.getItem('theme');
+            if (saved) { html.setAttribute('data-bs-theme', saved); updateIcon(saved); }
+
+            toggle.addEventListener('click', function() {
+                var cur = html.getAttribute('data-bs-theme');
+                var next = cur === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-bs-theme', next);
+                localStorage.setItem('theme', next);
+                updateIcon(next);
+            });
+
+            function updateIcon(t) {
+                toggle.innerHTML = t === 'dark' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
+            }
+        })();
+
+        (function() {
+            var btn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+
+        (function() {
+            var sections = document.querySelectorAll('section[id]');
+            var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            var sectionMap = { inicio:'/', zonaproyectos:'#zonaproyectos', experiencia:'#experiencia', educacion:'#sobre-mi', certificaciones:'#sobre-mi', 'sobre-mi':'#sobre-mi' };
+            window.addEventListener('scroll', function() {
+                var current = '';
+                sections.forEach(function(s) {
+                    if (window.scrollY >= s.offsetTop - 150) { current = s.id; }
+                });
+                navLinks.forEach(function(l) {
+                    l.classList.remove('active');
+                    var href = l.getAttribute('href');
+                    if (current && href && href.includes(sectionMap[current] || '')) { l.classList.add('active'); }
+                    if (!current && href === '/') { l.classList.add('active'); }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>

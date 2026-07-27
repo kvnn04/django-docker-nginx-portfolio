@@ -8,5 +8,5 @@ urlpatterns = [
     path('frontend', views.proyecto_frontend, name='frontend'),
     path('devops', views.proyecto_devops, name='devops'),
     path('fullstack', views.proyecto_fullstack, name='fullstack'),
-    path('redes', views.proyecto_redes, name='redes'),
+    # path('redes', views.proyecto_redes, name='redes'),
 ]

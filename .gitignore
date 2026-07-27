@@ -1,36 +1,58 @@
-# 1. Entorno Virtual (¡Nunca subir esto!)
-env/
+# === Entorno Virtual ===
 venv/
+.venv/
+env/
 ENV/
 
-# 2. Variables de Entorno (Datos sensibles / Secretos)
+# === Variables de Entorno ===
 .env
+.env.local
+.env.production
 
-# 3. Archivos de Python (Basura de compilación)
-**/__pycache__/
+# === Python ===
+__pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+dist/
+build/
 
-# 4. Base de Datos (Si usas SQLite para pruebas locales)
+# === Base de Datos ===
+db.sqlite3
 *.sqlite3
 
-# 5. Archivos de Docker y Estáticos generados
-# Nota: Los estáticos se generan en el servidor, no hace falta subirlos
+# === Archivos generados ===
 staticfiles/
+media/
 
-# 6. Archivos del Sistema Operativo
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
+**/.DS_Store
 Thumbs.db
-# Docker y Nginx
-nginx/default.conf.ssl_backup
-nginx/default.conf.staging_backup
-nginx/default.conf.PROD_BACKUP
 
-# No subir los certificados si los copiaste por error a la carpeta del proyecto
-etc/letsencrypt/
-*.pyc
-*.pem
-mi_clave_secreta.pem
+# === Logs ===
+logs/
+*.log
+
+# === Testing ===
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# === Docker / Nginx / SSL ===
+nginx/default.conf.*.bak
+nginx/default.conf.*.backup
+/etc/letsencrypt/
 certbot/
+*.pem
+*.key
 
-/logs
+# === Misc ===
+.macguardian/
