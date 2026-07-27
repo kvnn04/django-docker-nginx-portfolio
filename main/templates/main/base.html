@@ -87,11 +87,6 @@
                     <i class="bi bi-envelope-fill fs-5"></i>
                 </a>
 
-                <a href="https://wa.me/541151351658" target="_blank"
-                   class="btn btn-social btn-outline-success rounded-circle d-flex align-items-center justify-content-center"
-                   style="width: 48px; height: 48px;" title="WhatsApp">
-                    <i class="bi bi-whatsapp fs-5"></i>
-                </a>
             </div>
 
             <div class="d-flex justify-content-center gap-4 mb-3 flex-wrap small">
@@ -110,55 +105,6 @@
             crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 600, once: true, offset: 100 });
-
-        (function() {
-            var html = document.documentElement;
-            var toggle = document.getElementById('theme-toggle');
-            var saved = localStorage.getItem('theme');
-            if (saved) { html.setAttribute('data-bs-theme', saved); updateIcon(saved); }
-
-            toggle.addEventListener('click', function() {
-                var cur = html.getAttribute('data-bs-theme');
-                var next = cur === 'dark' ? 'light' : 'dark';
-                html.setAttribute('data-bs-theme', next);
-                localStorage.setItem('theme', next);
-                updateIcon(next);
-            });
-
-            function updateIcon(t) {
-                toggle.innerHTML = t === 'dark' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
-            }
-        })();
-
-        (function() {
-            var btn = document.getElementById('back-to-top');
-            window.addEventListener('scroll', function() {
-                btn.classList.toggle('visible', window.scrollY > 400);
-            });
-            btn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        })();
-
-        (function() {
-            var sections = document.querySelectorAll('section[id]');
-            var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            var sectionMap = { inicio:'/', zonaproyectos:'#zonaproyectos', experiencia:'#experiencia', educacion:'#sobre-mi', certificaciones:'#sobre-mi', 'sobre-mi':'#sobre-mi' };
-            window.addEventListener('scroll', function() {
-                var current = '';
-                sections.forEach(function(s) {
-                    if (window.scrollY >= s.offsetTop - 150) { current = s.id; }
-                });
-                navLinks.forEach(function(l) {
-                    l.classList.remove('active');
-                    var href = l.getAttribute('href');
-                    if (current && href && href.includes(sectionMap[current] || '')) { l.classList.add('active'); }
-                    if (!current && href === '/') { l.classList.add('active'); }
-                });
-            });
-        })();
-    </script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
