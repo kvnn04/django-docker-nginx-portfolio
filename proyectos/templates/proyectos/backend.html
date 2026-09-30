@@ -92,6 +92,82 @@
     </div>
 </div>
 
+<div class="col">
+    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <span class="p-2 bg-info text-white rounded-3 me-2 fw-bold">U</span>
+                <h5 class="card-title text-primary fw-bold mb-0">UBIMATE - IoT Water API</h5>
+            </div>
+            
+            <p class="card-text text-secondary">
+                Backend para dispensers inteligentes de agua con pagos vía <strong>Mercado Pago</strong>. Diseñé el pipeline webhook → <strong>RabbitMQ</strong> → worker con idempotencia en dos niveles (<strong>Redis</strong> + PostgreSQL), autenticación <strong>JWT</strong> con prevención IDOR y API keys AES-256 para dispensers, sobre <strong>.NET 10</strong> y <strong>PostgreSQL + PostGIS</strong>.
+            </p>
+            
+            <div class="mb-4">
+                <span class="badge rounded-pill bg-dark">.NET 10</span>
+                <span class="badge rounded-pill bg-primary">PostgreSQL + PostGIS</span>
+                <span class="badge rounded-pill bg-danger">Redis</span>
+                <span class="badge rounded-pill bg-warning text-dark">RabbitMQ</span>
+                <span class="badge rounded-pill bg-info text-dark">Mercado Pago</span>
+                <span class="badge rounded-pill bg-success">JWT + IDOR</span>
+            </div>
+            
+            <ul class="list-unstyled small text-muted mb-0">
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> Webhooks con 0% de error bajo carga k6</li>
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> Pool Npgsql 1000 + EF precompilado</li>
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> 50 tests xUnit + Docker Compose</li>
+            </ul>
+        </div>
+        
+        <div class="card-footer bg-light border-0 mt-2 p-4 pt-0 d-flex flex-wrap gap-2 align-items-center">
+            <a href="https://github.com/kvnn04/Ubimate" target="_blank" 
+            class="btn btn-primary btn-sm px-3 rounded-pill d-inline-flex align-items-center">
+                <i class="bi bi-github me-1"></i>
+                <span>Ver Repositorio</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="col">
+    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <span class="p-2 bg-danger text-white rounded-3 me-2 fw-bold">H</span>
+                <h5 class="card-title text-primary fw-bold mb-0">HIBRIDPAY HUB - Payment Gateway</h5>
+            </div>
+            
+            <p class="card-text text-secondary">
+                Gateway híbrido fiat (<strong>Mercado Pago</strong>) + crypto (<strong>Binance Pay</strong>) para PyMEs argentinas. Arquitectura <strong>multi-tenant</strong> con conciliación exacta multi-moneda, matching tolerante y exportación contable a Excel (Tango/Xubio/Contabilium), mensajería con <strong>MassTransit</strong> y <strong>.NET 10</strong>.
+            </p>
+            
+            <div class="mb-4">
+                <span class="badge rounded-pill bg-dark">.NET 10</span>
+                <span class="badge rounded-pill bg-primary">PostgreSQL 16</span>
+                <span class="badge rounded-pill bg-warning text-dark">MassTransit + RabbitMQ</span>
+                <span class="badge rounded-pill bg-info text-dark">Multi-tenant</span>
+                <span class="badge rounded-pill bg-success">Binance Pay + MP</span>
+                <span class="badge rounded-pill bg-secondary">715 tests xUnit</span>
+            </div>
+            
+            <ul class="list-unstyled small text-muted mb-0">
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> Asientos ARS con diferencia de cotización</li>
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> Webhooks async con DLQ y reintentos</li>
+                <li><i class="bi bi-check2-circle text-primary me-1"></i> RBAC jerárquico de 4 roles</li>
+            </ul>
+        </div>
+        
+        <div class="card-footer bg-light border-0 mt-2 p-4 pt-0 d-flex flex-wrap gap-2 align-items-center">
+            <a href="https://github.com/kvnn04/HibridPay" target="_blank" 
+            class="btn btn-primary btn-sm px-3 rounded-pill d-inline-flex align-items-center">
+                <i class="bi bi-github me-1"></i>
+                <span>Ver Repositorio</span>
+            </a>
+        </div>
+    </div>
+</div>
+
     </div>
 </div>
 {% endblock %}

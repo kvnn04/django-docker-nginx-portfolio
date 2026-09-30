@@ -90,6 +90,125 @@
         </div>
     </div>
 </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="p-2 bg-info text-white rounded-3 me-2 fw-bold">U</span>
+                        <h5 class="card-title text-primary fw-bold mb-0">UBIMATE - Sistema IoT Full-stack</h5>
+                    </div>
+                    
+                    <p class="card-text text-secondary">
+                        Sistema completo de dispensers inteligentes: app <strong>Flutter</strong> (mapa, pedidos, checkout con <strong>Mercado Pago</strong>) + API <strong>.NET 10</strong> (webhooks, <strong>RabbitMQ</strong>, <strong>Redis</strong>, <strong>PostGIS</strong>). Ambos lados contenerizados y orquestados con un solo <strong>Docker Compose</strong>.
+                    </p>
+                    
+                    <div class="mb-4">
+                        <span class="badge rounded-pill bg-dark">Flutter 3.47</span>
+                        <span class="badge rounded-pill bg-primary">.NET 10</span>
+                        <span class="badge rounded-pill bg-success">PostGIS + Redis</span>
+                        <span class="badge rounded-pill bg-warning text-dark">RabbitMQ</span>
+                        <span class="badge rounded-pill bg-info text-dark">Docker Compose</span>
+                    </div>
+                    
+                    <ul class="list-unstyled small text-muted mb-0">
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Front y back levantables por separado</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Retiro con PIN de 6 dígitos</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Dispensers con heartbeat perpetuo demo</li>
+                    </ul>
+                </div>
+                
+                <div class="card-footer bg-light border-0 mt-2 p-4 pt-0 d-flex flex-wrap gap-2 align-items-center">
+                    <a href="https://github.com/kvnn04/ubimate-app" target="_blank" 
+                    class="btn btn-primary btn-sm px-3 rounded-pill d-inline-flex align-items-center">
+                        <i class="bi bi-github me-1"></i>
+                        <span>Front</span>
+                    </a>
+                    <a href="https://github.com/kvnn04/Ubimate" target="_blank" 
+                    class="btn btn-outline-secondary btn-sm px-3 rounded-pill d-inline-flex align-items-center">
+                        <i class="bi bi-github me-1"></i>
+                        <span>Back</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="p-2 bg-danger text-white rounded-3 me-2 fw-bold">H</span>
+                        <h5 class="card-title text-primary fw-bold mb-0">HIBRIDPAY - Sistema de Pagos Full-stack</h5>
+                    </div>
+                    
+                    <p class="card-text text-secondary">
+                        Plataforma de pagos punta a punta: dashboard <strong>Next.js 16</strong> con RBAC + gateway <strong>.NET 10</strong> multi-tenant (fiat + crypto, conciliación ARS, Excel contable). Front y back en <strong>Docker</strong> con stacks independientes por compose.
+                    </p>
+                    
+                    <div class="mb-4">
+                        <span class="badge rounded-pill bg-dark">Next.js 16</span>
+                        <span class="badge rounded-pill bg-primary">.NET 10</span>
+                        <span class="badge rounded-pill bg-success">MassTransit</span>
+                        <span class="badge rounded-pill bg-warning text-dark">Multi-tenant</span>
+                        <span class="badge rounded-pill bg-info text-dark">Docker Compose</span>
+                    </div>
+                    
+                    <ul class="list-unstyled small text-muted mb-0">
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Roles: dueño, supervisor y cajero</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Onboarding atómico de tenants</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Seed + usuarios demo incluidos</li>
+                    </ul>
+                </div>
+                
+                <div class="card-footer bg-light border-0 mt-2 p-4 pt-0 d-flex flex-wrap gap-2 align-items-center">
+                    <a href="https://github.com/kvnn04/hibridpay-app" target="_blank" 
+                    class="btn btn-primary btn-sm px-3 rounded-pill d-inline-flex align-items-center">
+                        <i class="bi bi-github me-1"></i>
+                        <span>Front</span>
+                    </a>
+                    <a href="https://github.com/kvnn04/HibridPay" target="_blank" 
+                    class="btn btn-outline-secondary btn-sm px-3 rounded-pill d-inline-flex align-items-center">
+                        <i class="bi bi-github me-1"></i>
+                        <span>Back</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="p-2 bg-warning text-dark rounded-3 me-2 fw-bold">Q</span>
+                        <h5 class="card-title text-primary fw-bold mb-0">QUE SALE AHORA - Rankings en Vivo</h5>
+                    </div>
+                    
+                    <p class="card-text text-secondary">
+                        Guía de salidas con <strong>rankings dinámicos en tiempo real</strong>: Top 10 por zona y barrio con podio, motivos ("tengo ganas de..."), eventos y planes. Front <strong>Next.js</strong>, API comercial <strong>Node + TypeScript</strong> y motor de ranking en <strong>Rust</strong> con WebSockets, sobre <strong>PostgreSQL</strong>, <strong>Redis</strong> y <strong>RabbitMQ</strong> tras <strong>Traefik</strong>.
+                    </p>
+                    
+                    <div class="mb-4">
+                        <span class="badge rounded-pill bg-dark">Next.js</span>
+                        <span class="badge rounded-pill bg-primary">Node + TS</span>
+                        <span class="badge rounded-pill bg-danger">Rust + WebSockets</span>
+                        <span class="badge rounded-pill bg-success">Postgres + Redis</span>
+                        <span class="badge rounded-pill bg-warning text-dark">RabbitMQ</span>
+                        <span class="badge rounded-pill bg-info text-dark">Traefik</span>
+                    </div>
+                    
+                    <ul class="list-unstyled small text-muted mb-0">
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Scoring con contadores asíncronos</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Migraciones SQL idempotentes</li>
+                        <li><i class="bi bi-check2-circle text-success me-1"></i> Red segregada edge/backend/data</li>
+                    </ul>
+                </div>
+                
+                <div class="card-footer bg-light border-0 mt-2 p-4 pt-0 d-flex flex-wrap gap-2 align-items-center">
+                    <a href="https://github.com/kvnn04/ranking-app" target="_blank" 
+                    class="btn btn-primary btn-sm px-3 rounded-pill d-inline-flex align-items-center">
+                        <i class="bi bi-github me-1"></i>
+                        <span>Ver Repositorio</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

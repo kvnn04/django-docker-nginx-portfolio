@@ -639,7 +639,7 @@ tzdata==2025.3
 ### Kevin Herrera
 
 **Contacto:**
-- Teléfono: +54 11 5135-1658
+- Email: kvnherrera.04@gmail.com
 - Email: kvnherrera.04@gmail.com
 - LinkedIn: https://www.linkedin.com/in/kevin-herrera04
 - GitHub: https://github.com/kvnn04
